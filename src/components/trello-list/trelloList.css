@@ -1,6 +1,12 @@
 .trello-list {
-    background-color: blueviolet;
+    background-color: lightgray;
     border-radius: 3;
     width: 300px;
     padding: 8px;
+    height: 100%;
+    margin-right: 8px;
+}
+
+.trello-title {
+    padding-left: 15px;
 }

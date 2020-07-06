@@ -1,5 +1,5 @@
 {
-	"name": "project-1",
+	"name": "Kanban app",
 	"version": "^0.1.0",
 	"private": true,
 	"dependencies": {
@@ -9,6 +9,7 @@
 		"react-dom": "^16.8.6",
 		"react-redux": "^7.2.0",
 		"react-scripts": "^3.0.1",
+		"react-textarea-autosize": "^8.2.0",
 		"redux": "^4.0.5"
 	},
 	"scripts": {

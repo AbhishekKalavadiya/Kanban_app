@@ -1,0 +1,11 @@
+.trello-card{
+    margin: 3px;
+}
+
+.trello-text {
+    overflow: hidden;
+    padding: 10px;
+    margin: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}

@@ -5,9 +5,9 @@ import store  from './store/store'
 import App from './components/App'
 import './index.css'
 
-ReactDOM.render(
-    <Provider store={store}> 
+ReactDOM.render(<div className='index'>
+    <Provider store={store} > 
         <App />
-    </Provider>, 
+    </Provider></div>, 
     document.getElementById('root')
 )

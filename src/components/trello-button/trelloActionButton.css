@@ -1,0 +1,53 @@
+.trello-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 2;
+    height: 50px;
+    width: 272px;
+    padding-left: 10px;
+}
+
+.list-button{
+    margin: 0;
+    display: flex;
+    width: 272px;
+    height: 40px;
+    align-items: center;
+    padding: 5px;
+   
+    opacity: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.card-button{
+    align-items: center;
+    display: flex;
+    opacity: 0.5;
+    color: inherit;
+    background-color: inherit;
+}
+
+.card-textarea {
+    overflow: hidden;
+    min-height: 80px;
+    min-width: 265px;
+    margin: 8px;
+    padding: 6px 8px 8px 8px;
+}
+
+.textarea {
+    resize: none;
+    overflow: hidden;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.font-button-group {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
