@@ -1,16 +1,18 @@
 {
-	"name": "Kanban app",
+	"name": "kanban-app",
 	"version": "^0.1.0",
 	"private": true,
 	"dependencies": {
 		"@material-ui/core": "^4.11.0",
 		"@material-ui/icons": "^4.9.1",
 		"react": "^16.8.6",
+		"react-beautiful-dnd": "^13.0.0",
 		"react-dom": "^16.8.6",
 		"react-redux": "^7.2.0",
 		"react-scripts": "^3.0.1",
 		"react-textarea-autosize": "^8.2.0",
-		"redux": "^4.0.5"
+		"redux": "^4.0.5",
+		"styled-components": "^5.1.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",

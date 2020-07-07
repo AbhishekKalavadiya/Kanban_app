@@ -1,37 +1,37 @@
 import { CONSTANTS } from '../actions/actions'
 
-let listID = 2
-let cardID = 3
+let listID = `list-${2}`
+let cardID = `card-${5}`
 
 const initialState = [
     {
         title: 'Episode 1',
-        id: '0',
+        id: `list-${0}`,
         cards: [
             {
-                id:0,
+                id:`card-${0}`,
                 text: 'Hello my friend'
             },
             {
-                id:1,
+                id:`card-${1}`,
                 text: 'you are my best friend'
             }
         ]
     },
     {
         title: 'Episode 2',
-        id: '1',
+        id: `list-${1}`,
         cards: [
             {
-                id:0,
+                id:`card-${2}`,
                 text: 'Hello my friend'
             },
             {
-                id:1,
+                id:`card-${3}`,
                 text: 'you are my best friend'
             },
             {
-                id:2,
+                id:`card-${4}`,
                 text: 'working in the kanban appp'
             }
         ]
@@ -44,15 +44,15 @@ const listReducer = (state = initialState, actions)=> {
             const newList = {
                 title: actions.payload,
                 cards:[],
-                id: listID,
+                id: `list-${listID}`,
             }
             listID += 1
             return [...state, newList]
         
-        case CONSTANTS.ADD_CARD:
+        case CONSTANTS.ADD_CARD: {
             const newCard = {
                 text: actions.payload.text,
-                id: cardID
+                id: `card-${cardID}`
             }
             cardID += 1;
             const newState = state.map(list => {
@@ -64,7 +64,26 @@ const listReducer = (state = initialState, actions)=> {
                 }else { return list }
             }) 
             return newState   
-            
+        }
+
+        case CONSTANTS.DRAG_HAPPENED:
+            const {
+                droppableIdStart,
+                droppableIdEnd,
+                droppableIndexStart,
+                droppableIndexEnd,
+                draggableID
+            } = actions.payload
+
+            const newState = [...state]
+            //in the same list
+            if(droppableIdStart === droppableIdEnd){
+                const list = state.find(list => droppableIdStart === list.id)
+                const card = list.cards.splice(droppableIndexStart, 1)
+                list.cards.splice(droppableIndexEnd, 0, ...card)
+            }
+            return newState
+
         default:
             return state
     }

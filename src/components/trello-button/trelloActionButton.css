@@ -1,6 +1,6 @@
 .trello-button{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
     cursor: pointer;
     border-radius: 2;
@@ -16,7 +16,6 @@
     height: 40px;
     align-items: center;
     padding: 5px;
-   
     opacity: 1;
     color: white;
     background-color: rgba(0, 0, 0, 0.15);
